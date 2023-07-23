@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    background: linear-gradient(135deg, rgb(14, 23, 13), rgb(82, 155, 82));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: "Stencil", sans-serif;
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.calculator{
+    border: 5px solid #333;
+    border-radius: 10px;
+    background-image: url(fundocalculator.jpg);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    max-width: 90%; /* Adicionamos um tamanho máximo para a calculadora */
+}
+
+#display{
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    text-align: right;
+    border: none;
+    background-color: #999;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+button{
+    padding: 10px;
+    font-size: 18px;
+    background-color: #777;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.limpar{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #777;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #888;
+}
+
+button:active{
+    background-color: #666;
+}
+#result{
+    color: #fff;
+    border: 2px solid #555;
+    background-color: #333;
+    border-radius: 5px;
+}
+.results{
+    width: 90%; /* Ajustamos a largura da div de resultados para ocupar 100% do espaço disponível */
+    margin-top: 20px;
+    color: #fff;
+    border: 2px solid #555;
+    background-color: #333;
+    padding: 10px; /* Ajustamos o padding para espaçamento interno */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.results h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.results ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.results li{
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 600px){
+    .calculator {
+        max-width: 100%; /* Reduzir o tamanho da calculadora em telas menores */
+    }
+
+    .results{
+        width: 80%; /* Reduzir a largura da div de resultados em telas menores */
+    }
+}
